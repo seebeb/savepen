@@ -1,7 +1,7 @@
 # SAVEPEN PROJECT
 Savepen is social bookmarking web apps. People can join, save their favourite links, share it with their followers.
 
-In the future, maybe i will expand it to news aggregation platform, based on user bookmarks.
+In the future, i will expand it to news aggregation platfrom based on user bookmarks
 
 ## PLATFORM:
 - node.js (expressjs)
