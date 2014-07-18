@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block custom_style %}
+<link rel="stylesheet" href="/stylesheets/error.css">
+{% endblock %}
+
+{% block body_style %}error-page{% endblock %}
+
+{% block content %}
+  <div class="container text-center">
+    <h1>{{ error.status|safe }}</h1>
+    <p>
+      {{ message|safe }}
+      <br>
+      <span>Awww Snap! We're sorry, something's wrong here...</span>
+    </p>
+  </div>
+{% endblock %}

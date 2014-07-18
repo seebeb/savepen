@@ -1,0 +1,21 @@
+{
+  "name": "savepen",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "express": "~4.2.0",
+    "debug": "~0.7.4",
+    "moment": "~2.7.0",
+    "mongoose": "~3.8.12",
+    "morgan": "~1.0.0",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "static-favicon": "~1.0.0",
+    "swig": "~1.3.2"
+  }
+}

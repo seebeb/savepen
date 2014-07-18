@@ -1,0 +1,27 @@
+{
+  "name": "savepen",
+  "version": "0.0.1",
+  "authors": [
+    "Muhammad Nur Hidayat <seebeb@gmail.com>"
+  ],
+  "description": "savepen",
+  "main": "public/assets/style.css",
+  "license": "Apache License V2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "v3.1.1",
+    "bootstrap-social": "latest",
+    "fontawesome": "latest",
+    "angular": "~1.2.18",
+    "momentjs": "~2.5.1"
+  }
+}

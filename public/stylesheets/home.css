@@ -1,0 +1,104 @@
+html{
+  min-height:100%;
+}
+body{
+  height: 100%;
+  background: #eeeeee;
+  padding-bottom:40px;
+}
+.home-top{
+  min-height:690px;
+  background:#80bf27 url("../images/home-banner-bg.png") no-repeat center bottom;
+  color:#ffffff;
+  padding-bottom:40px;
+}
+h1{
+  text-indent: -999999px;
+  background: url("../images/logo.png") center no-repeat;
+  height: 48px;
+  margin: 68px 0 40px;
+}
+h2{
+  font-weight: 300;
+  font-size: 3em;
+}
+.landing-info p{
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.white-box{
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  color: #444444;
+  overflow: hidden;
+}
+
+/* login */
+input.form-control{border-radius: 3px !important;}
+.btn-login{
+  min-width: 200px;
+}
+.checkbox{
+  margin:2px 0;
+  font-size: .9em;
+  line-height: 20px;
+}
+
+/* register */
+h3.register-title{
+  margin: -12px -12px 12px;
+  border-bottom: 1px solid #dddddd;
+  line-height: 28px;
+  padding: 10px 12px;
+  font-size: 1.4em;
+  font-weight: 300;
+  background: #f5f5f5;
+  text-shadow: 0 1px #ffffff;
+  box-shadow: inset 0 -1px 2px rgba(175,175,175,.05);
+}
+h3.register-title span.label{
+  font-weight: 300;
+  text-shadow: none;
+}
+.register-form label{
+  margin-bottom: 2px;
+}
+.register-form .form-control{
+  margin-bottom: 8px;
+}
+.btn-register{
+  margin-top:4px;
+}
+.text-spacer{
+  background: #ffffff;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  top: -16px;
+  left: 50%;
+  width: 46px;
+  margin: 0 0 0 -23px;
+}
+
+/* footer link */
+.footer{
+  margin-top: 20px;
+  font-size: .85em;
+}
+ul.home-footer-link{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+}
+ul.home-footer-link li{
+  display: inline;
+}
+ul.home-footer-link li a{
+  padding:5px;
+  display: inline-block;
+}

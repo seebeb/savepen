@@ -1,0 +1,24 @@
+/*error page*/
+.error-page{
+  background: #eeeeee;
+  padding: 80px 0;
+  color: #444444;
+  text-shadow: 0 1px #ffffff;
+}
+  .error-page h1{
+    font-size: 13em;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+  .error-page p{
+    font-size: 3em;
+    font-weight: 300;
+  }
+    .error-page p span{
+      display: inline-block;
+      font-size: .6em;
+      margin-top: 10px;
+      padding-top: 15px;
+      border-top: 1px dashed #cccccc;
+    }
