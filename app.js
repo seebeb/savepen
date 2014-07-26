@@ -21,6 +21,12 @@ var express         = require('express'),
     cookieParser    = require('cookie-parser'),
     swig            = require('swig'),
     bodyParser      = require('body-parser'),
+    session         = require('cookie-session'),
+    config          = require('./config/config.json'),
+    db              = config.db,
+    passport        = require('passport'),
+    mongoose        = require('mongoose'),
+    flash           = require('connect-flash'),
     app             = express();
 
 // view engine setup
@@ -37,12 +43,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
+// Required for passport
+app.use(session(config.sessions)); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+// ### Database setup ###
+mongoose.connect(db.mongoose, function(err, res) {
+  if (err) {
+    console.error(("Failed to connect " + db.mongoose).red);
+  } else {
+    console.info(("Connected to MongoDB server! " + db.mongoose).green);
+  }
+});
+
+require('./config/passport')(passport);
 
 var routes          = require('./routes/index'),
-    users           = require('./routes/users');
+    accounts           = require('./routes/accounts');
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/accounts', accounts);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

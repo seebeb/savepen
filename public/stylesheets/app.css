@@ -1,0 +1,52 @@
+html{
+  min-height:100%;
+}
+body{
+  height: 100%;
+  padding-left: 176px;
+  font-size: 16px;
+}
+#nav{
+  width: 176px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #dddddd;
+  z-index: 20;
+  background: #222222;
+}
+  #nav .profile{
+    padding: 30px 0 16px;
+    text-align: center;
+  }
+    #nav .profile img{
+      border-radius: 50%;
+      width: 70px;
+      border: 2px solid #222222;
+      box-shadow: 0 0 0 5px rgba(255,255,255,.1);
+    }
+  #nav .nav-group{
+    padding: 16px 0;
+    border-top: 1px solid #333333;
+  }
+  #nav .nav-group.first{
+    padding-top: 0;
+    border-top: none;
+  }
+  #nav a{
+    display: block;
+    padding: 10px 20px;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  #nav a.active,#nav a:hover{
+    color: #79BF46;
+  }
+.main-content{
+  max-width: 816px;
+  margin: 0 auto;
+}

@@ -1,0 +1,16 @@
+{
+    "serverPort": 3000,
+
+    "db": {
+      "mongoose": "mongodb://localhost/savepen"
+    },
+
+    "sessions": {
+      "secret": "savepen"
+    },
+
+    "site": {
+      "app_name": "Savepen",
+      "name": "Savepen"
+    }
+}
