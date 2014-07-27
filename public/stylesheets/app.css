@@ -5,6 +5,7 @@ body{
   height: 100%;
   padding-left: 176px;
   font-size: 16px;
+  background: #f5f5f5;
 }
 #nav{
   width: 176px;
@@ -24,8 +25,8 @@ body{
   }
     #nav .profile img{
       border-radius: 50%;
-      width: 70px;
-      border: 2px solid #222222;
+      width: 80px;
+      border: 3px solid #222222;
       box-shadow: 0 0 0 5px rgba(255,255,255,.1);
     }
   #nav .nav-group{
@@ -46,7 +47,100 @@ body{
   #nav a.active,#nav a:hover{
     color: #79BF46;
   }
+
+
 .main-content{
   max-width: 816px;
   margin: 0 auto;
+}
+.feed{
+  padding: 28px 0;
+  border-bottom: 1px solid #dddddd;
+  color: #444444;
+}
+  a.feed-title{
+    color: #444444;
+    font-size: 1.6em;
+    display: block;
+    text-decoration: none;
+  }
+  .feed-title h2{
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 0;
+  }
+  .feed-body{
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+    .feed-info{
+      max-height: 275px;
+      overflow: hidden;
+    }
+    .feed-source, .feed-text{
+      display: block;
+    }
+    .feed-source{
+      font-size: .9em;
+      color: #999999;
+      margin-bottom: 5px;
+    }
+    .feed-text.text-only{
+      column-gap: 24px;
+      -webkit-column-gap: 24px;
+      -moz-column-gap: 24px;
+      -o-column-gap: 24px;
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      -o-column-count: 2;
+      max-height: 190px;
+    }
+    .feed-img-wrapper{
+      max-height: 280px;
+      overflow: hidden;
+    }
+    .feed-img-wrapper img{
+      width: 100%;
+    }
+  .feed-action{
+    margin-top: 10px;
+  }
+  .feed-action a{
+    font-size: .9em;
+    color: #999999;
+    margin-right: 20px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .feed-action a i{
+    font-size: 1.2em;
+    margin-right: 3px;
+  }
+
+@media (max-width: 1199px){
+  body{
+    padding-left: 0;
+  }
+  #nav{
+    left: -176px;
+  }
+  .feed{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+    .feed-body{
+      font-size: 1.1em;
+    }
+    .feed-info{
+      max-height: 200px;
+    }
+      .feed-text.text-only{
+        max-height: 150px;
+      }
+    .feed-img-wrapper{
+      max-height: 210px;
+    }
 }
