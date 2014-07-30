@@ -1,12 +1,19 @@
 html{
   min-height:100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 body{
-  height: 100%;
-  padding-left: 176px;
+  min-height: 100%;
   font-size: 16px;
+  padding-left: 176px;
   background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
+
+
 #nav{
   width: 176px;
   position: fixed;
@@ -16,7 +23,7 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
   border-right: 1px solid #dddddd;
-  z-index: 20;
+  z-index: 1000;
   background: #222222;
 }
   #nav .profile{
@@ -47,8 +54,42 @@ body{
   #nav a.active,#nav a:hover{
     color: #79BF46;
   }
+#nav-mobile{
+  display: none;
+  background: #ffffff url('../images/logo-b2.png') no-repeat center center;
+  background-size: auto 30px;
+  padding: 3px 24px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 900;
+  box-shadow: 0 1px 3px rgba(155,155,155, .1);
+  border-bottom: 1px solid #e0e0e0;
+}
+  #nav-mobile a.toggler, #nav-mobile a.add-new{
+    color: #79BF46;
+    text-decoration: none;
+    font-size: 1.8em;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+  #nav-mobile a.add-new{
+    position: relative;
+    top: 1px;
+  }
+  #nav-mobile img.logo{
+    height: 20px;
+  }
 
 
+.site-canvas {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+}
 .main-content{
   max-width: 816px;
   margin: 0 auto;
@@ -115,32 +156,121 @@ body{
     font-weight: 300;
     text-decoration: none;
   }
+  .feed-action a:hover{
+    color: #79BF46;
+  }
   .feed-action a i{
     font-size: 1.2em;
     margin-right: 3px;
   }
 
-@media (max-width: 1199px){
+.feed-read{
+  padding: 28px 0;
+}
+  .feed-read .feed-title h2{
+    font-size: 1.4em;
+    margin-top: 30px;
+    font-weight: 300;
+  }
+  .feed-read .feed-source{
+  }
+  .feed-read .feed-action{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 0;
+  }
+
+
+
+@media (min-width: 320px) and (max-width: 991px){
   body{
     padding-left: 0;
+    font-size: 14px;
+    overflow-x: hidden;
   }
   #nav{
-    left: -176px;
+    width: 220px;
+    left: -220px;
   }
-  .feed{
+  #nav-mobile{
+    display: block;
+  }
+  #nav,
+  #nav-mobile,
+  .site-canvas{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  body.show-nav{
+    height: 100%;
+    overflow: hidden;
+  }
+  .show-nav #nav,
+  .show-nav #nav-mobile,
+  .show-nav .site-canvas {
+    -webkit-transform: translateX(220px);
+    transform: translateX(220px);
+    -webkit-transform: translate3d(220px, 0, 0);
+    transform: translate3d(220px, 0, 0);
+  }
+  .main-content{
+    padding-top: 40px;
+  }
+  .feed, .feed-read{
     padding-left: 24px;
     padding-right: 24px;
   }
+    a.feed-title{
+      font-size: 1.4em;
+    }
     .feed-body{
-      font-size: 1.1em;
+      font-size: 1em;
+      margin-top: 10px;
     }
     .feed-info{
-      max-height: 200px;
+      max-height: 145px;
     }
       .feed-text.text-only{
         max-height: 150px;
+        column-count: 1;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -o-column-count: 1;
       }
     .feed-img-wrapper{
-      max-height: 210px;
+      max-height: 150px;
     }
+  .feed-read .feed-title h2{
+    font-size: 1.1em;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  body{
+    font-size: 15px;
+  }
+  .feed-body{
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  .feed-info{
+    max-height: 170px;
+  }
+  .feed-img-wrapper{
+    max-height: 180px;
+  }
+}
+
+@media (min-width: 992px){
+  .main-content{
+    padding: 0 24px;
+  }
 }

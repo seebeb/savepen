@@ -52,18 +52,20 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // ### Database setup ###
 mongoose.connect(db.mongoose, function(err, res) {
   if (err) {
-    console.error(("Failed to connect " + db.mongoose).red);
+    console.error("Failed to connect " + db.mongoose);
   } else {
-    console.info(("Connected to MongoDB server! " + db.mongoose).green);
+    console.info("Connected to MongoDB server! " + db.mongoose);
   }
 });
 
 require('./config/passport')(passport);
 
 var routes          = require('./routes/index'),
-    accounts           = require('./routes/accounts');
+    explore         = require('./routes/explore'),
+    accounts        = require('./routes/accounts');
 
 app.use('/', routes);
+app.use('/explore', explore);
 app.use('/accounts', accounts);
 
 /// catch 404 and forward to error handler

@@ -5,5 +5,5 @@ var app = require('../app');
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
-  debug('Savepen server listening on port ' + server.address().port);
+  console.info('Savepen server listening on port ' + server.address().port);
 });

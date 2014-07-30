@@ -3,10 +3,10 @@
     <img src="./images/users/53d3d4b5603d748e25bfafe5.jpg" alt="">
   </div>
   <div class="nav-group first">
-    <a href="/" class="active">
+    <a href="/" {% if state=='home' %}class="active"{% endif %}>
       <i class="fa fa-fw fa-home"></i> Home
     </a>
-    <a href="/">
+    <a href="/explore" {% if state=='explore' %}class="active"{% endif %}>
       <i class="fa fa-fw fa-compass"></i> Explore
     </a>
     <a href="/">
@@ -34,4 +34,14 @@
       <i class="fa fa-fw fa-sign-out"></i> Logout
     </a>
   </div>
+</div>
+
+<div id="nav-mobile" class="text-center">
+  <a href="javascript:void(0)" class="toggler pull-left">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="/bookmark/add" class="add-new pull-right">
+    <i class="fa fa-plus"></i>
+  </a>
 </div>

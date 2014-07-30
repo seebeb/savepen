@@ -5,7 +5,7 @@ var express   = require('express'),
 /* GET home page. */
 router.get('/', function(req, res) {
   if(req.isAuthenticated()) {
-    res.render('dashboard/index.html', { title: 'Savepen' });
+    res.render('dashboard/index.html', { state: 'home' });
   } else {
     res.redirect('/home');
   }
@@ -15,10 +15,11 @@ router.get('/home', function(req, res) {
   if(req.isAuthenticated()) {
     res.redirect('/');
   } else {
-    res.render('index.html', { title: 'Savepen' });
+    res.render('index.html');
   }
 });
 
+/* GET,POST login */
 router.get('/login', function(req, res) {
   if(req.isAuthenticated()) {
     res.redirect('/');
@@ -33,6 +34,7 @@ router.post('/login', passport.authenticate('local-login', {
   failureFlash : true // allow flash messages
 }));
 
+/* GET,POST register */
 router.get('/register', function(req, res) {
   if(req.isAuthenticated()) {
     res.redirect('/');
@@ -41,13 +43,13 @@ router.get('/register', function(req, res) {
   }
 });
 
-// process the signup form
 router.post('/register', passport.authenticate('local-signup', {
   successRedirect : '/login', // redirect to login
   failureRedirect : '/register', // redirect back to the signup page if there is an error
   failureFlash : true // allow flash messages
 }));
 
+/* GET logout */
 router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');

@@ -1,0 +1,82 @@
+{% extends '../layout.html' %}
+
+{% block custom_style %}
+<link rel="stylesheet" href="/stylesheets/app.css">
+{% endblock %}
+
+{% block content %}
+
+  {% include '../_partials/nav.html' %}
+  <div class="site-canvas">
+    <div class="main-content">
+
+      <div class="feed-read">
+        <a href="" class="feed-title">
+          <h2>{{ article.title }}</h2>
+        </a>
+        <div class="feed-body">
+          <div class="feed-source">Small Business Trend</div>
+          <div class="feed-action">
+            <a href="">
+              <i class="fa fa-thumbs-o-up"></i> Like
+            </a>
+            <a href="">
+              <i class="fa fa-thumbs-o-down"></i> Unlike
+            </a>
+            <a href="">
+              <i class="fa fa-bookmark-o"></i> Save
+            </a>
+            <a href="">
+              <i class="fa fa-share-alt"></i> Share
+            </a>
+          </div>
+          <div class="feed-text">
+            {{ article.content|safe }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+<script>
+  /*====================================
+  =            ON DOM READY            =
+  ====================================*/
+  $(function() {
+    // Toggle Nav on Click
+    $('.toggler').click(function() {
+      // Calling a function in case you want to expand upon this.
+      toggleNav();
+    });
+
+    $('html').click(function() {
+      if($('body.show-nav').length > 0){
+        toggleNav();
+      }
+    });
+    $('#nav, .toggler').click(function(event){
+      event.stopPropagation();
+    });
+  });
+
+
+  /*========================================
+  =            CUSTOM FUNCTIONS            =
+  ========================================*/
+  function toggleNav() {
+    if ($('body').hasClass('show-nav')) {
+      // Do things on Nav Close
+      $('.site-canvas').removeAttr('style');
+      $('body').removeClass('show-nav');
+    } else {
+      // Do things on Nav Open
+      $('body').addClass('show-nav');
+      $('.site-canvas').height($('#nav').outerHeight() + 'px').css('overflow-y', 'hidden');
+    }
+  }
+</script>
+
+{% endblock %}

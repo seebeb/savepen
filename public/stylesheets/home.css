@@ -5,6 +5,7 @@ body{
   height: 100%;
   background: #eeeeee;
   padding-bottom:40px;
+  font-size: 16px;
 }
 .home-top{
   min-height:690px;
@@ -20,7 +21,7 @@ h1{
 }
 h2{
   font-weight: 300;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .landing-info p{
   font-weight: 300;
@@ -101,4 +102,25 @@ ul.home-footer-link li{
 ul.home-footer-link li a{
   padding:5px;
   display: inline-block;
+}
+
+@media (max-width: 767px){
+  .container{
+    padding: 0;
+  }
+  h1{
+    background-size: auto 40px;
+  }
+  .landing-info{
+    text-align: center;
+  }
+  h2{
+    font-size: 1.8em;
+  }
+  .landing-info p.lead{
+    font-size: 1.2em;
+  }
+  .landing-info hr{
+    margin: 30px auto;
+  }
 }

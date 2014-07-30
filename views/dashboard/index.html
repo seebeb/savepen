@@ -6,76 +6,123 @@
 
 {% block content %}
   {% include '../_partials/nav.html' %}
-  <div class="main-content">
-    <div class="feed">
-      <a href="" class="feed-title">
-        <h2>US military's top secret X-37B shuttle 'disappears' for two weeks, changes orbit</h2>
-      </a>
-      <div class="feed-body">
-        <div class="row">
-          <div class="col-xs-5 feed-info">
-            <div class="feed-source">News.com.au</div>
-            <div class="feed-text">
-              AMATEUR astronomers are enjoying a cat-and-mouse game with the US military in keeping track of its secret space plane, the X-37B. The X-37B was launched in April amid much publicity, but scant detail about its true use.Built by Boeing's Phantom Works division, the X-37B program was originally headed by NASA.It was later turned over to the Pentagon's research and development arm and then to a secretive Air Force unit. US to strap anti-matter, anti-universe detector to ISS.
+  <div class="site-canvas">
+    <div class="main-content">
+      {% set obj = [ '1', '2', '3' ] %}
+      {% for x in obj %}
+      <div class="feed">
+        <a href="/explore" class="feed-title">
+          <h2>US military's top secret X-37B shuttle 'disappears' for two weeks, changes orbit</h2>
+        </a>
+        <div class="feed-body">
+          <div class="row">
+            <div class="col-xs-5 feed-info">
+              <div class="feed-source">News.com.au</div>
+              <div class="feed-text">
+                AMATEUR astronomers are enjoying a cat-and-mouse game with the US military in keeping track of its secret space plane, the X-37B. The X-37B was launched in April amid much publicity, but scant detail about its true use.Built by Boeing's Phantom Works division, the X-37B program was originally headed by NASA.It was later turned over to the Pentagon's research and development arm and then to a secretive Air Force unit. US to strap anti-matter, anti-universe detector to ISS.
+              </div>
             </div>
-          </div>
-          <div class="col-xs-7">
-            <div class="feed-img-wrapper">
-              <img src="http://images.getprismatic.com/web-resize/http%3A%2F%2Fresources2.news.com.au%2Fimages%2F2010%2F04%2F22%2F1225856%2F980890-x-37b.jpg/479/270" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="feed-action">
-        <a href="">
-          <i class="fa fa-thumbs-o-up"></i> Like
-        </a>
-        <a href="">
-          <i class="fa fa-thumbs-o-down"></i> Unlike
-        </a>
-        <a href="">
-          <i class="fa fa-bookmark-o"></i> Save
-        </a>
-        <a href="">
-          <i class="fa fa-share-alt"></i> Share
-        </a>
-      </div>
-    </div>
-
-    <div class="feed">
-      <a href="" class="feed-title">
-        <h2>Top 10 Most Successful One Person Startups</h2>
-      </a>
-      <div class="feed-body">
-        <div class="row">
-          <div class="col-xs-12 feed-info">
-            <div class="feed-source">Small Business Trend</div>
-            <div class="feed-text text-only">
-              <p>Many successful businesses started with just one person who had a vision and the technical skills to deliver it to the world.
-
-              Popular new sites like Techmeme, Newsblur, Instapaper and Duckduckgo started out this way which makes the costs of operating much more bearable in the beginning.
-
-              Even some of the largest companies in the world like eBay and Amazon began with one tech-savvy founder. Jeff Bezos was a computer engineer who decided to leave Wall Street to start an online book store out of his garage. Amazon is now the largest online retailer in the world with a revenue of $74.45 billion in 2013.
-
-              Meet more of the most successful one person startups and one person startup entrepreneurs making an impact online today.</p>
+            <div class="col-xs-7">
+              <div class="feed-img-wrapper">
+                <img src="http://images.getprismatic.com/web-resize/http%3A%2F%2Fresources2.news.com.au%2Fimages%2F2010%2F04%2F22%2F1225856%2F980890-x-37b.jpg/479/270" alt="">
+              </div>
             </div>
           </div>
         </div>
+        <div class="feed-action">
+          <a href="">
+            <i class="fa fa-thumbs-o-up"></i> Like
+          </a>
+          <a href="">
+            <i class="fa fa-thumbs-o-down"></i> Unlike
+          </a>
+          <a href="">
+            <i class="fa fa-bookmark-o"></i> Save
+          </a>
+          <a href="">
+            <i class="fa fa-share-alt"></i> Share
+          </a>
+        </div>
       </div>
-      <div class="feed-action">
-        <a href="">
-          <i class="fa fa-thumbs-o-up"></i> Like
+
+      <div class="feed">
+        <a href="/explore" class="feed-title">
+          <h2>Top 10 Most Successful One Person Startups</h2>
         </a>
-        <a href="">
-          <i class="fa fa-thumbs-o-down"></i> Unlike
-        </a>
-        <a href="">
-          <i class="fa fa-bookmark-o"></i> Save
-        </a>
-        <a href="">
-          <i class="fa fa-share-alt"></i> Share
-        </a>
+        <div class="feed-body">
+          <div class="row">
+            <div class="col-xs-12 feed-info">
+              <div class="feed-source">Small Business Trend</div>
+              <div class="feed-text text-only">
+                <p>Many successful businesses started with just one person who had a vision and the technical skills to deliver it to the world.
+
+                Popular new sites like Techmeme, Newsblur, Instapaper and Duckduckgo started out this way which makes the costs of operating much more bearable in the beginning.
+
+                Even some of the largest companies in the world like eBay and Amazon began with one tech-savvy founder. Jeff Bezos was a computer engineer who decided to leave Wall Street to start an online book store out of his garage. Amazon is now the largest online retailer in the world with a revenue of $74.45 billion in 2013.
+
+                Meet more of the most successful one person startups and one person startup entrepreneurs making an impact online today.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feed-action">
+          <a href="">
+            <i class="fa fa-thumbs-o-up"></i> Like
+          </a>
+          <a href="">
+            <i class="fa fa-thumbs-o-down"></i> Unlike
+          </a>
+          <a href="">
+            <i class="fa fa-bookmark-o"></i> Save
+          </a>
+          <a href="">
+            <i class="fa fa-share-alt"></i> Share
+          </a>
+        </div>
       </div>
+      {% endfor %}
     </div>
   </div>
+{% endblock %}
+
+{% block script %}
+<script>
+  /*====================================
+  =            ON DOM READY            =
+  ====================================*/
+  $(function() {
+    // Toggle Nav on Click
+
+    $('.toggler').click(function() {
+      // Calling a function in case you want to expand upon this.
+      toggleNav();
+    });
+
+    $('html').click(function() {
+      if($('body.show-nav').length > 0){
+        toggleNav();
+      }
+    });
+    $('#nav, .toggler').click(function(event){
+      event.stopPropagation();
+    });
+  });
+
+
+  /*========================================
+  =            CUSTOM FUNCTIONS            =
+  ========================================*/
+  function toggleNav() {
+    if ($('body').hasClass('show-nav')) {
+      // Do things on Nav Close
+      $('.site-canvas').removeAttr('style');
+      $('body').removeClass('show-nav');
+    } else {
+      // Do things on Nav Open
+      $('body').addClass('show-nav');
+      $('.site-canvas').height($('#nav').outerHeight() + 'px').css('overflow-y', 'hidden');
+    }
+  }
+</script>
+
 {% endblock %}
