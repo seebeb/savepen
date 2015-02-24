@@ -61,12 +61,22 @@ mongoose.connect(db.mongoose, function(err, res) {
 require('./config/passport')(passport);
 
 var routes          = require('./routes/index'),
+    api             = require('./routes/api'),
     explore         = require('./routes/explore'),
-    accounts        = require('./routes/accounts');
+    accounts        = require('./routes/accounts'),
+    scrapeDesignModo        = require('./routes/scrape-designmodo');
+
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 
 app.use('/', routes);
 app.use('/explore', explore);
 app.use('/accounts', accounts);
+app.use('/api', api);
+app.use('/scrape/designmodo', scrapeDesignModo);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
